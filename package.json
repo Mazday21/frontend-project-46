@@ -15,5 +15,6 @@
     "globals": "^15.2.0"
   },
   "dependencies": {
+    "commander": "^12.1.0"
   }
 }

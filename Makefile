@@ -6,3 +6,6 @@ publish:
 
 lint:
 	npx eslint .
+
+gendiff:
+	node gendiff.js -h
