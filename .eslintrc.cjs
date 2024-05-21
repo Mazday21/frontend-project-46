@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: 'airbnb-base',
   parserOptions: {
-    ecmaVersion: 'latest', // Замените "latest" на конкретную версию, например 2022, если это необходимо
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
