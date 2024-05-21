@@ -1,0 +1,19 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Mazday21/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mazday21/frontend-project-46/actions)",
+  "main": "gendiff.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^7.32.0",
+    "globals": "^15.2.0"
+  },
+  "dependencies": {
+  }
+}
