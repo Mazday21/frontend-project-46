@@ -8,4 +8,4 @@ lint:
 	npx eslint .
 
 gendiff:
-	node gendiff.js -h
+	node gendiff.js file1.json file2.json
