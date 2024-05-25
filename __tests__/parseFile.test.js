@@ -1,11 +1,13 @@
-import fs from 'fs';
+/* eslint-disable import/no-extraneous-dependencies */
+import { jest } from '@jest/globals';
+import { readFileSync } from 'node:fs';
 import path from 'path';
 import parseFile from '../src/parseFromFile.js';
 
+jest.mock('node:fs');
+
 const filepath1 = path.resolve('file1.json');
 const filepath2 = path.resolve('file2.json');
-
-jest.mock(fs);
 
 const obj1 = {
   host: 'hexlet.io',
@@ -20,7 +22,7 @@ const obj2 = {
   host: 'hexlet.io',
 };
 
-fs.readFileSync.mockImplementation((filepath) => {
+readFileSync.mockImplementation((filepath) => {
   if (filepath === filepath1) {
     return JSON.stringify(obj1);
   }
@@ -32,4 +34,8 @@ fs.readFileSync.mockImplementation((filepath) => {
 
 test('parseFile', () => {
   expect(parseFile(filepath1, filepath2)).toEqual([obj1, obj2]);
+});
+
+afterAll(() => {
+  jest.restoreAllMocks();
 });
