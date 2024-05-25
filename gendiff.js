@@ -22,8 +22,13 @@ function compare(obj1, obj2) {
       result[`  ${key}`] = obj1[key];
     }
   });
-
   return result;
+}
+
+function objectToString(obj) {
+  return Object.entries(obj)
+    .map(([key, value]) => `${key}: ${value}`)
+    .join('\n');
 }
 
 program
@@ -34,7 +39,7 @@ program
   .action((filepath1, filepath2, options) => {
     const arrObjs = parsingFile(filepath1, filepath2, options.format);
     const differences = compare(arrObjs[0], arrObjs[1]);
-    console.log(JSON.stringify(differences));
+    console.log(objectToString(differences));
   });
 
 program.parse(process.argv);
