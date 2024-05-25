@@ -8,8 +8,8 @@ function compare(obj1, obj2) {
   const sortedKeys = Array.from(keys).sort();
 
   sortedKeys.forEach((key) => {
-    const hasKey1 = Object.prototype.hasOwnProperty.call(obj1, key);
-    const hasKey2 = Object.prototype.hasOwnProperty.call(obj2, key);
+    const hasKey1 = Object.hasOwn(obj1, key);
+    const hasKey2 = Object.hasOwn(obj2, key);
 
     if (hasKey1 && !hasKey2) {
       result[`- ${key}`] = obj1[key];
