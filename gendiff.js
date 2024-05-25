@@ -2,7 +2,7 @@
 import { program } from 'commander';
 import parsingFile from './src/parseFromFile.js';
 
-function compare(obj1, obj2) {
+export function compareObjects(obj1, obj2) {
   const result = {};
   const keys = new Set([...Object.keys(obj1), ...Object.keys(obj2)]);
   const sortedKeys = Array.from(keys).sort();
@@ -25,7 +25,7 @@ function compare(obj1, obj2) {
   return result;
 }
 
-function objectToString(obj) {
+export function objectToString(obj) {
   return Object.entries(obj)
     .map(([key, value]) => `${key}: ${value}`)
     .join('\n');
@@ -38,7 +38,7 @@ program
   .arguments('<filepath1> <filepath2>')
   .action((filepath1, filepath2, options) => {
     const arrObjs = parsingFile(filepath1, filepath2, options.format);
-    const differences = compare(arrObjs[0], arrObjs[1]);
+    const differences = compareObjects(arrObjs[0], arrObjs[1]);
     console.log(objectToString(differences));
   });
 
