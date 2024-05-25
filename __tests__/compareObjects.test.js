@@ -1,4 +1,4 @@
-import { compareObjects } from '../gendiff.js';
+import compareObjects from '../src/compareObjects.js';
 
 const obj1 = {
   host: 'hexlet.io',

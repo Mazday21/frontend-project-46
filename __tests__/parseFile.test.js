@@ -2,11 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import parseFile from '../src/parseFromFile.js';
 
-jest.mock('fs');
-jest.mock('path', () => ({
-  ...jest.requireActual('path'),
-  extname: jest.fn(),
-}));
+const filepath1 = path.resolve('file1.json');
+const filepath2 = path.resolve('file2.json');
+
+jest.mock(fs);
 
 const obj1 = {
   host: 'hexlet.io',
@@ -21,26 +20,16 @@ const obj2 = {
   host: 'hexlet.io',
 };
 
+fs.readFileSync.mockImplementation((filepath) => {
+  if (filepath === filepath1) {
+    return JSON.stringify(obj1);
+  }
+  if (filepath === filepath2) {
+    return JSON.stringify(obj2);
+  }
+  return null;
+});
+
 test('parseFile', () => {
-  const filepath1 = 'file1.json';
-  const filepath2 = 'file2.json';
-
-  fs.readFileSync.mockImplementation((filePath) => {
-    if (filePath === filepath1) {
-      return JSON.stringify(obj1);
-    }
-    if (filePath === filepath2) {
-      return JSON.stringify(obj2);
-    }
-    return null;
-  });
-
-  path.extname.mockImplementation((filePath) => {
-    if (filePath === filepath1 || filePath === filepath2) {
-      return '.json';
-    }
-    return '';
-  });
-
   expect(parseFile(filepath1, filepath2)).toEqual([obj1, obj2]);
 });

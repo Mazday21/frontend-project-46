@@ -1,4 +1,4 @@
-import { objectToString } from '../gendiff.js';
+import objectToString from '../src/objectToString.js';
 
 const obj = {
   '- follow': false,
@@ -9,7 +9,7 @@ const obj = {
   '+ verbose': true,
 };
 
-const str = '- follow: false\nhost: hexlet.io\n- proxy: 123.234.53.22\n- timeout: 50\n+timeout: 20\n+ verbose: true';
+const str = '- follow: false\n  host: hexlet.io\n- proxy: 123.234.53.22\n- timeout: 50\n+ timeout: 20\n+ verbose: true';
 
 test('objectToString', () => {
   expect(objectToString(obj)).toEqual(str);
