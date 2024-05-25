@@ -25,11 +25,11 @@ test('parseFile', () => {
   const filepath1 = 'file1.json';
   const filepath2 = 'file2.json';
 
-  fs.readFileSync.mockImplementation((path) => {
-    if (path === filepath1) {
+  fs.readFileSync.mockImplementation((filePath) => {
+    if (filePath === filepath1) {
       return JSON.stringify(obj1);
     }
-    if (path === filepath2) {
+    if (filePath === filepath2) {
       return JSON.stringify(obj2);
     }
     return null;
