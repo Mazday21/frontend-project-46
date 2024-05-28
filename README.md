@@ -10,6 +10,6 @@
 
 ## How to download & install? git clone -> make publish -> npm link
 
-## DEMO
+## DEMO with json files
 
 [![asciicast](https://asciinema.org/a/UzCNrwMfJ2pwVmBbKYPnRKbN9.svg)](https://asciinema.org/a/UzCNrwMfJ2pwVmBbKYPnRKbN9)
