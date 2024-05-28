@@ -4,7 +4,7 @@
 
 [![Actions Status](https://github.com/Mazday21/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mazday21/frontend-project-46/actions)
 
-[![Actions Status](https://github.com/Mazday21/frontend-project-46/actions/workflows/test-and-lint-check.yml.yml/badge.svg)](https://github.com/Mazday21/frontend-project-46/actions)
+[![Actions Status](https://github.com/Mazday21/frontend-project-46/actions/workflows/node.js.yml.yml/badge.svg)](https://github.com/Mazday21/frontend-project-46/actions)
 
 ## How to download & install? git clone -> make publish -> npm link
 
