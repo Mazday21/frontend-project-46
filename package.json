@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Compares two configuration files and shows a difference.",
   "bin": {
-    "gendiff": "gendiff.js"
+    "gendiff": "bin/gendiff.js"
   },
   "type": "module",
   "jest": {
@@ -11,7 +11,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "author": "",
   "license": "ISC",
