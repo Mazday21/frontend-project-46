@@ -149,7 +149,4 @@ sftp-config.json
 .settings/
 .vscode/
 
-file1.json
-file2.json
-
 jest.config.js
