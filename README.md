@@ -6,6 +6,8 @@
 
 [![Actions Status](https://github.com/Mazday21/frontend-project-46/actions/workflows/node.js.yml/badge.svg)](https://github.com/Mazday21/frontend-project-46/actions)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4bbe87791686f7fc8fed/test_coverage)](https://codeclimate.com/github/Mazday21/frontend-project-46/test_coverage)
+
 ## How to download & install? git clone -> make publish -> npm link
 
 ## DEMO
