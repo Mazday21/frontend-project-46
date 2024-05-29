@@ -13,3 +13,7 @@
 ## DEMO with json files
 
 [![asciicast](https://asciinema.org/a/UzCNrwMfJ2pwVmBbKYPnRKbN9.svg)](https://asciinema.org/a/UzCNrwMfJ2pwVmBbKYPnRKbN9)
+
+## DEMO with yml files
+
+[![asciicast](https://asciinema.org/a/6yo5AIPUV7qgMYThqat5Am8Xc.svg)](https://asciinema.org/a/6yo5AIPUV7qgMYThqat5Am8Xc)
