@@ -12,8 +12,12 @@ export default function compareObjects(obj1, obj2) {
     } else if (!hasKey1 && hasKey2) {
       result[`+ ${key}`] = obj2[key];
     } else if (hasKey1 && hasKey2 && obj1[key] !== obj2[key]) {
-      result[`- ${key}`] = obj1[key];
-      result[`+ ${key}`] = obj2[key];
+      if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
+        result[`  ${key}`] = compareObjects(obj1[key], obj2[key]);
+      } else {
+        result[`- ${key}`] = obj1[key];
+        result[`+ ${key}`] = obj2[key];
+      }
     } else if (hasKey1 && hasKey2) {
       result[`  ${key}`] = obj1[key];
     }

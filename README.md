@@ -12,8 +12,8 @@
 
 ## DEMO with json files
 
-[![asciicast](https://asciinema.org/a/UzCNrwMfJ2pwVmBbKYPnRKbN9.svg)](https://asciinema.org/a/UzCNrwMfJ2pwVmBbKYPnRKbN9)
+[![asciicast](https://asciinema.org/a/oT9VCeCUs8ZXZ3jpROWundYYU.svg)](https://asciinema.org/a/oT9VCeCUs8ZXZ3jpROWundYYU)
 
 ## DEMO with yml files
 
-[![asciicast](https://asciinema.org/a/6yo5AIPUV7qgMYThqat5Am8Xc.svg)](https://asciinema.org/a/6yo5AIPUV7qgMYThqat5Am8Xc)
+[![asciicast](https://asciinema.org/a/yL78xDqEaWtJlvYGY8ueIL6Nq.svg)](https://asciinema.org/a/yL78xDqEaWtJlvYGY8ueIL6Nq)
