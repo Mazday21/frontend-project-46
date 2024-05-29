@@ -3,6 +3,8 @@ import parseFile from '../src/parseFromFile.js';
 
 const filepath1 = path.resolve('__fixtures__/file1.json');
 const filepath2 = path.resolve('__fixtures__/file2.json');
+const filepath3 = path.resolve('__fixtures__/file1.yml');
+const filepath4 = path.resolve('__fixtures__/file2.yml');
 
 const obj1 = {
   host: 'hexlet.io',
@@ -17,6 +19,12 @@ const obj2 = {
   host: 'hexlet.io',
 };
 
-test('parseFile', () => {
-  expect(parseFile(filepath1, filepath2)).toEqual([obj1, obj2]);
+describe('parseFile function', () => {
+  test('parses JSON files', () => {
+    expect(parseFile(filepath1, filepath2)).toEqual([obj1, obj2]);
+  });
+
+  test('parses YAML files', () => {
+    expect(parseFile(filepath3, filepath4)).toEqual([obj1, obj2]);
+  });
 });
