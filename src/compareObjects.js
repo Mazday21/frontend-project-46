@@ -1,26 +1,33 @@
-export default function compareObjects(obj1, obj2) {
-  const result = {};
-  const keys = new Set([...Object.keys(obj1), ...Object.keys(obj2)]);
-  const sortedKeys = Array.from(keys).sort();
+import _ from 'lodash';
 
-  sortedKeys.forEach((key) => {
-    const hasKey1 = Object.hasOwn(obj1, key);
-    const hasKey2 = Object.hasOwn(obj2, key);
+const diff = (obj1, obj2) => {
+  const sortedUniKeys = _.sortBy(_.union(Object.keys(obj1), Object.keys(obj2)));
+  const resultObj = sortedUniKeys.map((key) => {
+    const value1 = obj1[key];
+    const value2 = obj2[key];
 
-    if (hasKey1 && !hasKey2) {
-      result[`- ${key}`] = obj1[key];
-    } else if (!hasKey1 && hasKey2) {
-      result[`+ ${key}`] = obj2[key];
-    } else if (hasKey1 && hasKey2 && obj1[key] !== obj2[key]) {
-      if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
-        result[`  ${key}`] = compareObjects(obj1[key], obj2[key]);
-      } else {
-        result[`- ${key}`] = obj1[key];
-        result[`+ ${key}`] = obj2[key];
-      }
-    } else if (hasKey1 && hasKey2) {
-      result[`  ${key}`] = obj1[key];
+    if (!Object.hasOwn(obj1, key)) {
+      return { key, value: value2, type: 'added' };
     }
+
+    if (!Object.hasOwn(obj2, key)) {
+      return { key, value: value1, type: 'deleted' };
+    }
+
+    if (value1 === value2) {
+      return { key, value: value1, type: 'unchanged' };
+    }
+
+    if (typeof value1 === 'object' && typeof value2 === 'object') {
+      return { key, value: diff(value1, value2), type: 'hasChild' };
+    }
+    return {
+      key,
+      oldValue: value1,
+      value: value2,
+      type: 'changed',
+    };
   });
-  return result;
-}
+  return resultObj;
+};
+export default diff;
