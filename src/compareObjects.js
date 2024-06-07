@@ -6,19 +6,19 @@ const diff = (obj1, obj2) => {
   return sortedUniKeys.reduce((acc, key) => {
     const value1 = obj1[key];
     const value2 = obj2[key];
-    let item = { key };
+    let item;
 
     if (!Object.hasOwn(obj1, key)) {
-      item = { ...item, value: value2, type: 'added' };
+      item = { key, value: value2, type: 'added' };
     } else if (!Object.hasOwn(obj2, key)) {
-      item = { ...item, value: value1, type: 'deleted' };
+      item = { key, value: value1, type: 'deleted' };
     } else if (value1 === value2) {
-      item = { ...item, value: value1, type: 'unchanged' };
+      item = { key, value: value1, type: 'unchanged' };
     } else if (typeof value1 === 'object' && typeof value2 === 'object' && value1 !== null && value2 !== null) {
-      item = { ...item, value: diff(value1, value2), type: 'hasChild' };
+      item = { key, value: diff(value1, value2), type: 'hasChild' };
     } else {
       item = {
-        ...item, oldValue: value1, value: value2, type: 'changed',
+        key, oldValue: value1, value: value2, type: 'changed',
       };
     }
 
