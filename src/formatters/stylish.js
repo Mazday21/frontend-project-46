@@ -7,10 +7,10 @@ const stringify = (data, depth) => {
     return `${data}`;
   }
 
-  const currentReplacer = indent.repeat(depth);
+  const nestedIndent = indent.repeat(depth);
   const entries = Object.entries(data);
-  const strings = entries.map(([key, value]) => `${currentReplacer}    ${key}: ${stringify(value, depth + 1)}`);
-  return `{\n${strings.join('\n')}\n${currentReplacer}}`;
+  const strings = entries.map(([key, value]) => `${nestedIndent}    ${key}: ${stringify(value, depth + 1)}`);
+  return `{\n${strings.join('\n')}\n${nestedIndent}}`;
 };
 
 const stylish = (data) => {
