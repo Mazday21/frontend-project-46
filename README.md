@@ -7,7 +7,9 @@
 
 ## How to download & install? git clone -> make publish -> npm link
 
-## `gendiff -h` to read help, `gendiff -V` to see version, `gendiff --format plain <path to file1> <path to file2>` to select formatter
+## `gendiff -h` to read help
+## `gendiff -V` to see version
+## `gendiff --format plain <path to file1> <path to file2>` to select formatter
 
 ## DEMO with json files(stylish)
 
