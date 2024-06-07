@@ -32,7 +32,7 @@ const plain = (data) => {
         case 'unchanged':
           return [];
         default:
-          throw new Error('something wrong');
+          throw new Error('Unknown type');
       }
     });
     return strings.filter((item) => item !== undefined).join('\n');
