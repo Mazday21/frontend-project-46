@@ -19,12 +19,7 @@ const plain = (data) => {
       const {
         key, oldValue, value, type,
       } = node;
-      let newPath;
-      if (path === '') {
-        newPath = key;
-      } else {
-        newPath = `${path}.${key}`;
-      }
+      const newPath = path === '' ? key : `${path}.${key}`;
 
       switch (type) {
         case 'added':
