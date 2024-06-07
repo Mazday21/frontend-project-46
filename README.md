@@ -18,3 +18,11 @@
 ## DEMO with yml files(stylish)
 
 [![asciicast](https://asciinema.org/a/yL78xDqEaWtJlvYGY8ueIL6Nq.svg)](https://asciinema.org/a/yL78xDqEaWtJlvYGY8ueIL6Nq)
+
+## DEMO with json files(plain)
+
+[![asciicast](https://asciinema.org/a/55R6eFe8zoYytJgJZZMrC4yva.svg)](https://asciinema.org/a/55R6eFe8zoYytJgJZZMrC4yva)
+
+## DEMO with json files(JSON)
+
+[![asciicast](https://asciinema.org/a/IEVwML5f7nePoA0PrGDWqSUIx.svg)](https://asciinema.org/a/IEVwML5f7nePoA0PrGDWqSUIx)
