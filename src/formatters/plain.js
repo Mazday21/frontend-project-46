@@ -19,7 +19,13 @@ const plain = (data) => {
       const {
         key, oldValue, value, type,
       } = node;
-      const newPath = path === '' ? `${key}` : `${path}.${key}`;
+      let newPath;
+      if (path === '') {
+        newPath = key;
+      } else {
+        newPath = `${path}.${key}`;
+      }
+
       switch (type) {
         case 'added':
           return `Property '${newPath}' was added with value: ${stringify(value)}`;
