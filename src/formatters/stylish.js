@@ -32,7 +32,7 @@ const stylish = (data) => {
         case 'hasChild':
           return `${nestedIndent}    ${key}: ${iter(value, depth + 1)}`;
         default:
-          throw new Error('something wrong');
+          throw new Error('Unknown type');
       }
     });
     return `{\n${result.join('\n')}\n${nestedIndent}}`;
