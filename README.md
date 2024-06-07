@@ -7,10 +7,12 @@
 
 ## How to download & install? git clone -> make publish -> npm link
 
-## DEMO with json files
+## `gendiff -h` to read help, `gendiff -V` to see version, `gendiff --format plain <path to file1> <path to file2>` to select formatter
+
+## DEMO with json files(stylish)
 
 [![asciicast](https://asciinema.org/a/oT9VCeCUs8ZXZ3jpROWundYYU.svg)](https://asciinema.org/a/oT9VCeCUs8ZXZ3jpROWundYYU)
 
-## DEMO with yml files
+## DEMO with yml files(stylish)
 
 [![asciicast](https://asciinema.org/a/yL78xDqEaWtJlvYGY8ueIL6Nq.svg)](https://asciinema.org/a/yL78xDqEaWtJlvYGY8ueIL6Nq)
